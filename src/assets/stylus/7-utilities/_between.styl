@@ -1,0 +1,28 @@
+.u-between {
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.u-flex-two {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 900px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.u-flex-two--marginInt {
+  & > *:nth-child(1) {
+    margin-right: 0.3rem;
+    margin-bottom: 0;
+  }
+  & > *:nth-child(2) {
+    margin-left: 0.3rem;
+  }
+}
