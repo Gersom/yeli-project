@@ -3,6 +3,8 @@ import Vue        from 'vue'
 import Router     from 'vue-router'
 
 import Home       from '~/pages/index'
+import Lawyer     from '~/pages/abogada'
+import Adviser    from '~/pages/asesora'
 import ErrorLayout from '~/layouts/error'
 
 Vue.use(Router)
@@ -18,6 +20,16 @@ export function createRouter () {
         path: '/',
         name: 'Home',
         component: Home
+      },
+      {
+        path: '/abogada',
+        name: 'Lawyer',
+        component: Lawyer
+      },
+      {
+        path: '/asesora',
+        name: 'Adviser',
+        component: Adviser
       },
       {
         path: '/404',
