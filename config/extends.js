@@ -14,6 +14,7 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
+    ['@nuxtjs/svg'],
     [
       '@nuxtjs/router',
       {
@@ -29,6 +30,5 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     // '@nuxtjs/axios',
-    // ['@nuxtjs/svg'],
   ]
 }

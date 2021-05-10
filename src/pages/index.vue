@@ -2,24 +2,31 @@
   .container
     div
       Logo
-      h1.o-title
-        |yeli-project
+      h1.title
+        |Yeli Mota
+      h2.subtitle
+        |Youtuber / Streamer
 
       .links
-        NuxtLink(:to="{ name: 'Lawyer' }" class="button--green")
-          span Abogada
-        NuxtLink(:to="{ name: 'Adviser' }" class="button--green")
-          span Asesora
+        ButtonStreamer(nameTo='Lawyer' contentText='Abogada')
+        ButtonStreamer(nameTo='Adviser' contentText='Asesora')
 
 </template>
 
 <script>
-export default {}
+
+import ButtonStreamer from '~/components/ButtonStreamer'
+
+export default {
+  components: { ButtonStreamer }
+}
+
 </script>
 
 <style lang='stylus' scoped>
 
   .container
+    background-color: rgb(233, 161, 185)
     margin: 0 auto;
     min-height: 100vh;
     display: flex;
@@ -27,16 +34,11 @@ export default {}
     align-items: center;
     text-align: center;
 
-  .subtitle
-    font-weight: 300;
-    font-size: 42px;
-    color: #526488;
-    word-spacing: 5px;
-    padding-bottom: 15px;
-
   .links
-    padding-top: 15px;
-    & > *:nth-child(1)
-      margin-right 15px
+    display flex
+    justify-content center
+    align-items center
+  .links > *
+      margin 0 10px
 
 </style>
