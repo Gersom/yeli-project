@@ -2,6 +2,8 @@ export default {
   routes: [
     // STATIC ROUTES
     '/',
+    '/abogada',
+    '/asesora',
     '/404'
 
     // DYNAMIC ROUTES

@@ -21,6 +21,7 @@ export default {
   css: [
     // toastr
     // 'toastr/build/toastr.min.css'
+    '~/assets/stylus/main.styl'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

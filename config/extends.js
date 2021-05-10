@@ -30,14 +30,5 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     // '@nuxtjs/axios',
     // ['@nuxtjs/svg'],
-    [
-      'nuxt-stylus-resources-loader',
-      [
-        resolve(__dirname, '../src/assets/stylus/1-settings/*.styl'),
-        resolve(__dirname, '../src/assets/stylus/4-elements/*.styl'),
-        resolve(__dirname, '../src/assets/stylus/5-objects/*.styl'),
-        resolve(__dirname, '../src/assets/stylus/7-utilities/*.styl')
-      ]
-    ]
   ]
 }
