@@ -1,6 +1,5 @@
 <template lang='pug'>
   .container(:class='nameTheme')
-    Menu
     div
       Logo
       h1.title
@@ -17,15 +16,9 @@
 <script>
 
 import { mapGetters } from 'vuex'
-import ButtonStreamer from '~/components/ButtonStreamer'
-import Menu from '~/components/Menu'
-import Logo from '~/components/Logo'
 
 export default {
   name: 'HomePage',
-  components: {
-    ButtonStreamer, Menu, Logo
-  },
   computed: {
     ...mapGetters({
       nameTheme: 'theme/nameTheme'

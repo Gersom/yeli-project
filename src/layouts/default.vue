@@ -1,5 +1,15 @@
-<template>
-  <div>
+<template lang='pug'>
+
+  div
+    <Menu />
     <Nuxt />
-  </div>
+
 </template>
+
+<script>
+
+export default {
+  components: {}
+}
+
+</script>
