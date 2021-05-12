@@ -4,7 +4,8 @@ export default {
       ['@babel/plugin-proposal-private-methods', { loose: true }]
     ]
   },
-
+  devtools: process.env.NODE_ENV === 'development',
+  cssSourceMap: process.env.NODE_ENV === 'development',
   extractCSS: process.env.NODE_ENV === 'production',
   publicPath: process.env.NODE_ENV === 'development' ? '/_nuxt/' : '/',
   filenames: {
