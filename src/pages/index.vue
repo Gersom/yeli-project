@@ -1,5 +1,6 @@
 <template lang='pug'>
-  .container(:class='mode[statusMode]')
+  .container(:class='nameTheme')
+    Menu
     div
       Logo
       h1.title
@@ -8,8 +9,6 @@
         |Youtuber / Streamer
 
       .links
-        button(@click='toogleMode')
-          span Alternar Modo
         ButtonStreamer(nameTo='Lawyer' contentText='Abogada')
         ButtonStreamer(nameTo='Adviser' contentText='Asesora')
 
@@ -17,25 +16,21 @@
 
 <script>
 
+import { mapGetters } from 'vuex'
 import ButtonStreamer from '~/components/ButtonStreamer'
+import Menu from '~/components/Menu'
+import Logo from '~/components/Logo'
 
 export default {
-  components: { ButtonStreamer },
-  data () {
-    return {
-      mode: ['white', 'black'],
-      statusMode: 0
-    }
+  name: 'HomePage',
+  components: {
+    ButtonStreamer, Menu, Logo
   },
-  methods: {
-    toogleMode () {
-      this.statusMode += 1
-      if (this.statusMode > (this.mode.length - 1)) {
-        this.statusMode = 0
-      }
-    }
+  computed: {
+    ...mapGetters({
+      nameTheme: 'theme/nameTheme'
+    })
   }
-
 }
 
 </script>
@@ -50,9 +45,9 @@ export default {
     justify-content: center;
     align-items: center;
     text-align: center;
-  .container.white
+  .container.light
     background: radial-gradient(circle, $clr-primary 0%, $clr-primary2 100%);
-   .container.black
+   .container.dark
     background: radial-gradient(circle, $clr-primary-dark 0%, $clr-primary-dark2 50%, $clr-primary-dark3 100%);
 
   .links
