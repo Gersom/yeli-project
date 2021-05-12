@@ -18,8 +18,9 @@ export default {
 <style lang='stylus' scoped>
 
 .c-logo
+  align-items center
   display flex
-  margin 0 auto
+  justify-content center
   figure
     background #fff
     display block

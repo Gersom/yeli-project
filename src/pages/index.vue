@@ -1,11 +1,12 @@
 <template lang='pug'>
-  .container(:class='nameTheme')
+  .HomePage(:class='nameTheme')
     div
-      Logo
+      .logito
+        <Logo />
       h1.title
         |Yeli Mota
       h2.subtitle
-        |Youtuber / Streamer
+        |Streamer / Youtuber / Influencer
 
       .links
         ButtonStreamer(nameTo='Lawyer' contentText='Abogada')
@@ -30,7 +31,7 @@ export default {
 
 <style lang='stylus' scoped>
 
-  .container
+  .HomePage
     background-color: $clr-primary
     margin: 0 auto;
     min-height: 100vh;
@@ -38,15 +39,23 @@ export default {
     justify-content: center;
     align-items: center;
     text-align: center;
-  .container.light
+  .HomePage.light
     background: radial-gradient(circle, $clr-primary 0%, $clr-primary2 100%);
-   .container.dark
+  .HomePage.dark
     background: radial-gradient(circle, $clr-primary-dark 0%, $clr-primary-dark2 50%, $clr-primary-dark3 100%);
 
+  .HomePage
+    .logito
+      margin-bottom 20px
+    .title
+      font-size 50px
+      margin-bottom 0
+
   .links
+    align-items center
     display flex
     justify-content center
-    align-items center
+    margin-top 30px
   .links > *
       margin 0 10px
 
